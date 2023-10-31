@@ -1,3 +1,5 @@
+import java.util.LinkedList
+
 fun main(args: Array<String>){
     println("Welcome to Chapter 9 \n")
 
@@ -224,7 +226,16 @@ fun main(args: Array<String>){
     //Lists and Mutable (can be manipulated) Lists can hold duplicate values...
     //but in Sets, uniqueness is the key point so that they can not..
 
+    data class User(val name:String, val surname:String)
 
+    var myMap:MutableMap<Int,User> = mutableMapOf(1 to User("Serhat","Erdem"))
+    myMap.put(1881,User("Mustafa Kemal","Atatürk"))
+
+    myMap.put(2001, User("Samet Berkant","Koca"))
+
+    val myHashMap:HashMap<Int,User> = myMap as HashMap<Int,User>
+    println(myHashMap.entries)
+    //Find a project related witch data sturcture ( map, set, list, array)
 
 
 
